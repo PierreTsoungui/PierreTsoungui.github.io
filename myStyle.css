@@ -1,0 +1,419 @@
+/* Damit Partikel den Hintergrund füllen */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* nach hinten legen */
+  background-color: white;  /* dunkler Hintergrund */
+}
+
+h1 {
+  /*text-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+  font-weight: 900;
+
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    padding-top: 30px;
+}
+ #typed-text {
+    font-family:'Orbitron', sans-serif, monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black; /* blinkender Cursor */
+    animation: blink 0.7s infinite;
+
+  
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { border-color: black; }
+    25%, 75% { border-color: transparent; }
+  }
+/* Grundzustand: kleiner Burger, Striche orange */
+.navbar-toggler {
+  width: 40px;           /* Button-Größe */
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;    /* Kreisform */
+  background-color: transparent; /* normal transparent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%236366f1' stroke-width='3' stroke-linecap='round' d='M4 6h22M4 14h22M4 22h22'/%3E%3C/svg%3E");
+}
+
+/* Hover: ganzer Button orange, Kreis bleibt */
+.navbar-toggler:hover {
+  background-color:  #4f46e5;
+  border-radius: 50%;
+}
+
+/* Focus: Kreisförmiger orange Rahmen */
+.navbar-toggler:focus {
+  outline: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.3rem rgba(0,0,255,0.5); /* leicht transparentes Orange */
+}
+
+.right-content {
+  flex: 1;
+  text-align: center;
+}
+
+.left-content {
+  flex: 1;
+}
+
+.my-name{
+  font-family: 'Orbitron',sans-serif;
+  letter-spacing: 2px;
+
+}
+.icon {
+  display: inline-flex;           /* macht Kreis möglich */
+  justify-content: center;
+  align-items: center;
+  width: 40px;                    /* Größe des Kreises */
+  height: 40px;
+  border-radius: 50%;             /* Kreisform */
+  background-color: #f5f7fa;  /* kein Hintergrund */
+  text-decoration: none;             /* Icon-Farbe */
+  border: 1px solid  #f5f7fa;      /* Kreisrahmen */
+  margin-right: 10px;             /* Abstand */
+
+}
+
+
+.btn-glow{
+    background-color: #f5f7fa;
+    border: none;
+    color :#0d6efd;
+}
+
+.btn-glow:hover{
+  background-color:#0d6efd;
+  color: white;
+}
+/*@keyframes glow {
+    0%,100%{
+        box-shadow: 0 0 5px #f5f7fa ,0 0 10px #f5f7fa;
+    }
+    50%{
+        box-shadow: 0 0 20px #f5f7fa, 0 0 40px b#f5f7fa;
+    }
+}*/
+/* Klick-Effekt
+.btn-glow:active {
+  background-color: blue;
+  transform: scale(0.95);                 
+ box-shadow: inset 0 0 5px rgba(0,0,255,0.5); 
+}*/
+
+.navbar,.offcanvas{
+  background-color:   white;
+
+}
+.offcanvas .btn-close{
+  filter: invert(0);
+}
+
+i{
+  color:  #0d6efd;
+  
+}
+.page-section {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+  transition: opacity 0.3s ease;
+}
+
+.page-section.active {
+  opacity: 1;
+  position: relative;
+  left: 0;
+}
+
+ 
+.list-group-item i {
+  margin-right: 100px; /* oder 15px für mehr Abstand */
+   /* optional: Icon-Farbe (Bootstrap Blau) */
+  font-size: 1rem;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 10px 15px;
+
+}
+.shadow-about {
+                /* weißer Hintergrund */
+  border-radius: 12px;            /* abgerundete Ecken */
+  padding: 25px 30px;             /* Innenabstand */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12); /* Schatten */
+  line-height: 1.6;               /* besser lesbarer Text */
+
+}
+
+#about{ 
+  margin-top: 50px;
+ }
+ .about-box {
+  
+  padding: 15px;          
+}
+
+.shadow-about1 {
+ /* weißer Hintergrund nur hier */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  line-height: 1.7;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.right-content {
+  position: relative;
+  z-index: 1; /* über .mylist */
+}
+
+.mylist {
+  position: relative; /* kein absolute nötig */
+  z-index: 0;         /* standardmäßig hinter dem Button oder Bild */
+  max-height: 300px;
+  overflow-y: auto;
+
+
+
+}
+.card-custom {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.card-custom .card {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 0.75rem; /* gleichmäßig zu rechter Box */
+}
+
+.card-custom .btn {
+  width: auto;
+  white-space: nowrap;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+}
+
+
+.item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+}
+
+.skill-bar {
+  background-color: #e0e1dd;
+  border-radius: 12px;
+  height: 12px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: #0d6efd;
+  text-align: right;
+  padding-right: 3px;
+  line-height: 12px;
+  color: white;
+  border-radius: 12px 0 0 12px;
+}
+
+/* Haupttitel */
+h4 {
+  color: #5a67d8; /* Sekundärfarbe */
+  font-weight: 700;
+}
+h6{
+    font-weight: 400;
+
+}
+/* Untertitel */
+h5 {
+  color: #2d3748; /* Dunkler, neutraler Text */
+  font-weight: 600;
+}
+p{
+color: #2d3748;
+}
+
+.btn-ghost {
+  background-color: #eaf2ff;   /* sehr helles Blau */
+  color: #0d6efd;              /* Bootstrap Blau für Text */
+  border: none;                /* keine harte Linie */
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.btn-ghost:hover {
+  background-color: #d6e8ff;   /* etwas dunkler beim Hover */
+  color: #0a58ca;              /* dunkleres Blau */
+
+}
+p{
+  font-family: 'Poppins';
+    font-weight: 400;
+} /* Grundlegendes Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Karten */
+.certCard {
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+  text-align: center;
+ 
+}
+
+.card-image{
+ cursor: pointer;
+ width: 100%;
+ position: relative;
+ overflow: hidden;
+ box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.1);
+ transition: transform 0.3s, box-shadow 0.3s;
+
+}
+.card-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.card h5 {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+
+/* Overlay für Auge */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* Lightbox-Stil */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+  transition: transform 0.3s;
+  transform: scale(0.8); /* Start kleiner für Zoom-Effekt */
+}
+
+#lightbox.show img {
+  transform: scale(1); /* Vollzoom */
+}
+.intro {
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  min-height: 60px;
+}
+
+.intro h4,
+.intro p {
+  margin: 0;             /* Entfernt Standardabstand oben/unten */
+  padding: 0;
+}
+.intro h4 {
+  margin-bottom: 10px;
+}
+
+.uniform-img {
+  width: 100%;
+  height: 240px; /* Passe die Höhe an, z. B. 200px, 220px etc. */
+  object-fit: cover; /* Zuschneiden ohne Verzerren */
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+
+/* gleichmäßiger Schatten für jede Karte */
+.shadow-custom {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 0.75rem;
+}
+.shadow-custom:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  transform: translateY(-4px);
+}
+.nav-link {
+  color: #212529 !important; /* fast schwarz */
+}
+

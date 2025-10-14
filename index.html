@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meine Webseite</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet">
+ 
+
+    <!-- Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!--icons-->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  crossorigin="anonymous"
+/>
+  <!-- Eigene Styles -->
+  <link rel="stylesheet" href="myStyle.css" />
+</head>
+<body class="bg-body-secondary" id="pageBody">
+
+  <!-- Hintergrund-Partikel -->
+  <div id="particles-js" class="d-none "></div>
+
+  <!-- Navigation  --> 
+
+   <nav class="navbar fixed-top border">
+  <div class="container-fluid d-flex align-items-center justify-content-start ">
+    
+    <!-- Toggle Button -->
+    <button class="navbar-toggler me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Brand -->
+    <h3 class="navbar-brand fw-bold ">Startseite</h3>
+
+    <div class="offcanvas offcanvas-start" style="width: 220px;" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold fs-3" id="offcanvasDarkNavbarLabel ">Pierre Junior</h5>
+       <!--<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>-->
+      </div>
+      <div class="offcanvas-body mt-0">
+        <!-- Navigation -->
+        <ul class="navbar-nav">
+          <li><a class="nav-link active" href="#home"><i class="fa-solid fa-house me-3"></i>Startseite</a></li>
+          <li><a class="nav-link" href="#about"><i class="fa-solid fa-user me-3  "></i>Über mich</a></li>
+          <li><a class="nav-link" href="#Portfolio"><i class="fa-solid fa-briefcase me-3 "></i>Portfolio</a></li>
+          <li><a class="nav-link" href="#certificate"><i class="fa-solid fa-scroll me-3"></i>Zertifikate</a></li>
+          <li><a class="nav-link" href="#cv"><i class="fas fa-file-alt me-3"></i>Lebenslauf</a></li>
+          <li><a class="nav-link" href="#contact"><i class="fa-solid fa-phone me-3"></i>Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- Inhalt -->
+  <main>
+   <section id="home" class="page-section active align-items-center d-flex justify-content-between vh-100 container">
+  <!-- Linker Bereich -->
+  <div class="left-content">
+    <p class="fw-bold">Hi!, ich heiße</p>
+    <h1 class="my-name" style=" font-size: 50px;">Pierre Junior</h1>
+    <h1 class="my-name" style=" font-size: 50px;" >Tsoungui</h1> 
+    <h3 class="my-name fs-3 mt-3">Informatikstudent</h3>
+
+    <!-- Social Media -->
+    <div class="mt-3" >
+      <a href="https://github.com/PierreTsoungui" class="icon"><i class="fa-brands fa-github"></i></a>
+      <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+
+    <!-- Button -->
+    <a href="#contact" class="btn btn-glow mt-4" id="phone" style="font-size: 15px;">Mich kontaktieren</a>
+  </div>
+
+    <!-- Rechter Bereich -->
+    <div class="right-content d-flex align-items-center">
+      <!-- Getypter Text -->
+     <h1 class="display-4 fw-bold " id="typed-text"></h1>
+   
+    </div>
+  </section>
+<section id="about" class="page-section py-5 min-vh-100 ">
+<div class="container">
+  <div class="row justify-content-start align-items-stretch g-4">
+
+    <!-- Linke Box -->
+   <!-- Linke Box -->
+<div class="col-12 col-md-5 col-lg-4">
+  <div class="bg-white about-box w-100 h-100">
+    <div class="d-flex flex-column">
+    <div class="card shadow-about" style="background-color:  #d6e8ff;">
+      <img src="images/profil.jpg" alt="ProfilBild">
+       <a href="documents/mein_cv.pdf" class="btn mt-2 d-inline-block mx-auto btn-ghost" download="mein_cv">
+        <i class="fa-solid fa-briefcase me-2"></i> CV herunterladen
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Rechte Box -->
+    <div class="col-12 col-md-6 col-lg-8 d-flex">
+    <div class="bg-white about-box  w-100 h-100">
+      <div class="shadow-about1 flex-grow-1">
+      <h4 class="text-center mt-2"> Über mich</h3>
+        <p>
+          Hi! Ich bin Pierre Junior Tsoungui, Informatikstudent mit Leidenschaft für Softwareentwicklung.
+          Mein Fokus liegt auf Webentwicklung und künstlicher Intelligenz, wo ich kreative Ideen mit moderner Technologie verbinde.
+          Neben meinen technischen Fähigkeiten lege ich großen Wert auf Teamarbeit, Kreativität und eigenständiges Arbeiten. 
+          Mein Ziel ist es, mich kontinuierlich weiterzuentwickeln und meine Leidenschaft in spannende Projekte einzubringen.
+        </p>
+      </div>
+    </div>
+</div>
+  </div>
+</div>
+
+
+    <div class="intro abilities-wrapper container text-center mt-4 mb-2  rounded bg-white ">
+      <h4>Fähigkeiten</h4>
+       <p> Einen Überblick über die Technologien und Werkzeuge, die ich beherrsche</p>
+     </div>
+
+
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 bg-white">
+    <div class="col ">
+      <h5 class=" text-center mt-2">Programmiersprachen </h5>
+      <h6>Java</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">80%</div>
+      </div>
+        <h6>C</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+       <h6>Python</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">70%</div>
+      </div>
+        <h6>Javascript</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+        <h6>Typescript</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+        <h6>PHP</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">60%</div>
+  </div>
+   <h6>Latex</h6>
+   <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">60%</div>
+  </div>
+    </div>
+  
+    <div class="col">
+       <h5 class=" text-center mt-2">Webtechnologie </h5>
+      <h6>HTML</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">85%</div>
+      </div>
+        <h6>CSS3</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+        <h6>Bootstrap</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+        <h5 class=" text-center mt-3">Datenbank</h5>
+      <h6>MariaDB</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">85%</div>
+      </div>
+       <h6>PostgreSQL</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">85%</div>
+      </div>
+    </div>
+    <div class="col">
+       <h5 class=" text-center mt-3">Entwicklungumgebung </h5>
+      <h6>vsCode</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">85%</div>
+      </div>
+        <h6>IntelliJ</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+      <h6>Webstorm</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+    </div>
+    <div class="col">
+       <h5 class=" text-center mt-3">Betriebsysteme</h5>
+      <h6>Windows</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">85%</div>
+      </div>
+        <h6>Linux</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+     <h5 class=" text-center mt-3">AndereTools</h5>
+      <h6>GIT</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">85%</div>
+      </div>
+        <h6>Docker</h6>
+      <div class="skill-bar">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+      <h6>MS Office 365 (Word, Excel, Powerpoint)</h6>
+      <div class="skill-bar mb-2">
+        <div class="skill-fill" style="width: 90%;">90%</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="contact"  class="page-section py-5 min-vh-100">
+   <div class="container mt-4 bg-white">
+    <h3 class="mb-3 mt-4 p-3 text-center fw-bold">Lasst uns austauschen!</h3>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-3 justify-content-center mb-3">
+
+    <!-- Adresse -->
+    <div class="col">
+      <div class="d-flex flex-column border p-3 text-center h-100 mx-auto" style="max-width: 220px;">
+        <i class="fa-solid fa-location-dot fa-1x mb-2"></i>
+        <h6 class="fw-bold fs-6">Adresse</h6>
+        <p>Gießen-Hessen, Germany</p>
+      </div>
+    </div>
+
+    <!-- Telefon -->
+    <div class="col">
+      <div class="d-flex flex-column border p-3 text-center h-100 mx-auto" style="max-width: 220px;">
+        <i class="fa-solid fa-phone fa-1x mb-2"></i>
+        <h6 class="fw-bold fs-6">Telefon</h6>
+        <p>+49 176 57161116</p>
+      </div>
+    </div>
+
+    <!-- E-Mail -->
+    <div class="col">
+      <div class="d-flex flex-column border p-3 text-center h-100 mx-auto" style="max-width: 220px;">
+        <i class="fa-solid fa-envelope fa-1x mb-2"></i>
+        <h6 class="fw-bold fs-6">E-Mail</h6>
+        <p>juniorts24@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="col">
+      <div class="d-flex flex-column border p-3 text-center h-100 mx-auto" style="max-width: 220px;">
+        <i class="fa-solid fa-share-nodes fa-1x mb-2"></i>
+        <h6 class="fw-bold fs-6">Soziale Netzwerke</h6>
+        <div>
+          <a href="https://linkedin.com" target="_blank" class="me-2 text-decoration-none">
+            <i class="fa-brands fa-linkedin fa-lg icon"></i>
+          </a>
+          <a href="https://github.com/PierreTsoungui" target="_blank" class="me-2 text-decoration-none">
+            <i class="fa-brands fa-github fa-lg icon"></i>
+          </a>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4 class="mb-3 text-center fs-6" >Schreiben Sie mir!</h4>
+
+  <!-- Name -->
+<div class="mb-3">
+  <div class="input-group">
+    <span class="input-group-text bg-transparent">
+      <i class="fa-solid fa-user"></i>
+    </span>
+    <input type="text" 
+           class="form-control border-start-0" 
+           id="nameInput" 
+           placeholder="Name">
+  </div>
+</div>
+
+<!-- Email -->
+<div class="mb-3">
+  <div class="input-group">
+    <span class="input-group-text border-end-0 bg-transparent">
+      <i class="fa-solid fa-envelope"></i>
+    </span>
+    <input type="email" 
+           class="form-control border-start-0" 
+           id="emailInput" 
+           placeholder="ihre@email.com">
+  </div>
+</div>
+
+<!-- Nachricht -->
+<div class="mb-3">
+  <label for="messageInput" class="form-label">Nachricht</label>
+  <textarea class="form-control" id="messageInput" rows="3"></textarea>
+</div>
+
+<div class="mb-3">
+  <button type="button" id="sendBtn" class="btn btn-primary mb-3" style="font-size: 15px;">Nachricht senden</button>
+</div>
+</section>
+<section id="certificate" class="page-section py-5 min-vh-100">
+
+  <div class="intro text-center container mb-4 mt-4 rounded bg-white">
+    <h4>Zertifikate</h4>
+    <p > Werfen Sie einen Blick auf einige schon erworbene Zertifikate</p>
+  </div>
+
+  <div class="container justify-content-center bg-white">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-3">
+
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card certCard">
+          <div class="card-image">
+          <img src="images/bootstrap.jpg" alt="Bootstrap Zertifikat">
+          <div class="overlay">
+            <!-- Augen-Symbol -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.5 407.08 64 288 64S57.71 135.5 3.48 241.4a32.35 32.35 0 0 0 0 29.2C57.71 376.5 168.92 448 288 448s230.29-71.5 284.52-177.4a32.35 32.35 0 0 0 0-29.2zM288 400c-88.22 0-167.34-48.9-214.55-128C120.66 192.9 199.78 144 288 144s167.34 48.9 214.55 128C455.34 351.1 376.22 400 288 400zm0-208a80 80 0 1 0 80 80 80 80 0 0 0-80-80zm0 128a48 48 0 1 1 48-48 48 48 0 0 1-48 48z"/></svg>
+          </div>
+        </div>
+          <h6 class="mt-2">Kategorie: <span class="text-bg-primary rounded badge">Frontend</span></h6>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card certCard">
+          <div class="card-image">
+          <img src="images/javaScript.jpg" alt="JavaScript Zertifikat">
+          <div class="overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.5 407.08 64 288 64S57.71 135.5 3.48 241.4a32.35 32.35 0 0 0 0 29.2C57.71 376.5 168.92 448 288 448s230.29-71.5 284.52-177.4a32.35 32.35 0 0 0 0-29.2zM288 400c-88.22 0-167.34-48.9-214.55-128C120.66 192.9 199.78 144 288 144s167.34 48.9 214.55 128C455.34 351.1 376.22 400 288 400zm0-208a80 80 0 1 0 80 80 80 80 0 0 0-80-80zm0 128a48 48 0 1 1 48-48 48 48 0 0 1-48 48z"/></svg>
+          </div>
+          </div>
+          <h6  class="mt-2">Kategorie: <span class="text-bg-primary badge rounded">Frontend</span></h6>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card certCard">
+          <div class="card-image">
+          <img src="images/docker.jpg" alt="Docker Zertifikat">
+          <div class="overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M572.52 241.4C518.29 135.5 407.08 64 288 64S57.71 135.5 3.48 241.4a32.35 32.35 0 0 0 0 29.2C57.71 376.5 168.92 448 288 448s230.29-71.5 284.52-177.4a32.35 32.35 0 0 0 0-29.2zM288 400c-88.22 0-167.34-48.9-214.55-128C120.66 192.9 199.78 144 288 144s167.34 48.9 214.55 128C455.34 351.1 376.22 400 288 400zm0-208a80 80 0 1 0 80 80 80 80 0 0 0-80-80zm0 128a48 48 0 1 1 48-48 48 48 0 0 1-48 48z"/></svg>
+          </div>
+          </div>
+          <h6  class="mt-2">Kategorie: <span class="text-bg-primary badge rounded">DevOps</span></h6>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="Portfolio" class="page-section py-5 min-vh-100 ">
+  <div class="container">
+    
+    <!-- Titel -->
+    <div class="intro text-center mb-5  bg-white rounded mt-4">
+      <h4 class="fw-bold mb-2 ">Portfolio</h4>
+      <p class="text-muted mb-0">Schauen Sie sich einige meiner Projekte an</p>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+  <div class="col">
+        <div class="bg-white p-3 rounded h-100">
+          <div class="card h-100 border-0 shadow-custom">
+            <img src="images/feuer_Wasser_Pflanze.jpg" class="card-img-top uniform-img" alt="Feuer, Wasser, Pflanze">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Feuer, Wasser, Pflanze</h5>
+              <p class="card-text">
+                Ein einfaches Spiel, das dem bekannten <em>Schere, Stein, Papier</em> ähnelt.
+              </p>
+              <div class="mb-3">
+                <span class="badge text-bg-secondary me-1">HTML</span>
+                <span class="badge text-bg-secondary me-1">CSS</span>
+                <span class="badge text-bg-secondary">Bootstrap</span>
+              </div>
+              <a href="https://pierretsoungui.github.io/Feuer-Wasser-Planze/" class="btn btn-primary btn-sm ">Zum Projekt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <div class="col">
+        <div class="bg-white p-3 rounded h-100">
+          <div class="card h-100 border-0 shadow-custom">
+            <img src="images/colorDex.png" class="card-img-top uniform-img" alt="Feuer, Wasser, Pflanze">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Pokémon Farb-Analyzer</h5>
+              <p class="card-text">
+                Ein einfaches Spiel, das dem bekannten <em> Guess my RGB</em> ähnelt.
+              </p>
+              <div class="mb-3">
+                <span class="badge text-bg-secondary me-1">HTML</span>
+                <span class="badge text-bg-secondary me-1">CSS</span>
+                <span class="badge text-bg-secondary">Bootstrap</span>
+              </div>
+              <a href="https://pierretsoungui.github.io/Feuer-Wasser-Planze/" class="btn btn-primary btn-sm ">Zum Projekt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Karte 2 -->
+      <div class="col">
+        <div class="bg-white p-3 rounded  h-100">
+          <div class="card h-100 border-0 shadow-custom">
+            <img src="images/simon.png" class="card-img-top uniform-img" alt="Simon Game">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Simon Game Singleplayer</h5>
+              <p class="card-text">
+                Ein kleines Simon-Spiel (Einzelmodus), bei dem der Spieler sich die angezeigte Farbsequenz merken und korrekt wiederholen muss.
+              </p>
+              <div class="mb-3">
+                <span class="badge text-bg-secondary me-1">HTML</span>
+                <span class="badge text-bg-secondary me-1">CSS</span>
+                <span class="badge text-bg-secondary">JavaScript</span>
+              </div>
+              <a href="https://pierretsoungui.github.io/simon-game-singleplayer/" class="btn btn-primary btn-sm ">Zum Projekt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+  <div class="bg-white p-3 rounded h-100">
+    <div class="card h-100 border-0 shadow-custom">
+      <img src="images/simon.png" class="card-img-top uniform-img" alt="Feuer, Wasser, Pflanze">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">Simon Game (Mehrspieler-Modus)</h5>
+        <p class="card-text">
+          Dieses Projekt implementiert ein Mehrspieler-Simon-Spiel.
+          Die Spieler müssen Farbsequenzen wiederholen, die in jeder Runde länger und schneller werden.
+          Das Projekt wurde im Rahmen eines Universitätsprojekts in einer Gruppe von 2 Personen umgesetzt.
+          </p>
+          <div class="mb-3">
+          <span class="badge text-bg-secondary">Java</span>
+          <span class="badge text-bg-secondary">MQTT (Mosquitto)</span>
+          <span class="badge text-bg-secondary me-1">HTML</span>
+          <span class="badge text-bg-secondary me-1">CSS</span>
+          <span class="badge text-bg-secondary">JavaScript</span>
+        </div>
+        <a href="https://github.com/PierreTsoungui/simons-game-multiplayer" class="btn btn-primary btn-sm">Zum Projekt</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="col">
+  <div class="bg-white p-3 rounded h-100">
+    <div class="card h-100 border-0 shadow-custom">
+      <img src="images/simon.png" class="card-img-top uniform-img" alt="Feuer, Wasser, Pflanze">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold">Ninja Virtuelle Machine</h5>
+        <p class="card-text">
+          Dieses Projekt implementiert ein Mehrspieler-Simon-Spiel.
+          Die Spieler müssen Farbsequenzen wiederholen, die in jeder Runde länger und schneller werden.
+          Das Projekt wurde im Rahmen eines Universitätsprojekts in einer Gruppe von 2 Personen umgesetzt.
+          </p>
+          <div class="mb-3">
+          <span class="badge text-bg-secondary">C Programming</span>
+          <span class="badge text-bg-secondary">Heap Management</span>
+          <span class="badge text-bg-secondary">Stack Management</span>
+          
+          
+        
+        </div>
+        <a href="https://github.com/PierreTsoungui/simons-game-multiplayer" class="btn btn-primary btn-sm">Zum Projekt</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+</section>
+<section id="cv" class="page-section py-5 min-vh-100">
+  <div class="container">
+    <div class="intro text-center mb-5  bg-white rounded mt-4">
+      <h4 class="fw-bold mb-2 "> Ausbildung und Erfahrungen</h4>
+      <p class="text-muted mb-0">Werfen Sie einen Blick auf meinen bisherigen beruflichen Werdegang sowie meine Erfahrungen</p>
+    </div>
+   </div>
+  </section>
+<!-- Lightbox nur einmal -->
+<div id="lightbox">
+  <img src="" alt="Zertifikat">
+</div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="myScript.js"> </script>
+  <script>
+
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 100 },
+    "size": { "value": 5 },
+    "move": { "speed": 2 },
+    "color": { "value": "#222222" }, // Partikel dunkelgrau
+    "line_linked": {
+      "enable": true,
+      "color": "#444444", // Linien etwas heller als Partikel
+      "width": 2
+    },
+    "shape": { "type": "circle" }
+  }
+});
+  </script>
+</body>
+</html>
+
+
+
