@@ -417,3 +417,180 @@ body {
   color: #212529 !important; /* fast schwarz */
 }
 
+/* === Timeline Grundlayout === */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: #e0e0e0;
+  transform: translateX(-50%);
+}
+
+/* === Timeline Items === */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  margin-bottom: 3rem;
+}
+
+/* Linke Seite */
+.timeline-item.left {
+  padding-right: 50px; /* etwas kleiner */
+  text-align: right;
+  left: 0;
+}
+
+/* Rechte Seite */
+.timeline-item.right {
+  padding-left: 50px;
+  text-align: left;
+  left: 50%;
+}
+
+/* === Inhalt (Karten) === */
+.timeline-content {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Der eigentliche Innenabstand */
+.timeline-content .card-body {
+  padding: 1.25rem 1.75rem; /* reduziert für weniger "Luft" */
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+}
+.card-body .title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.card-body .subtitle {
+  margin: 0;
+  padding-left: 0.5rem;  /* Einrückung */
+  margin-top: 0.2rem;    /* Abstand zu h4 */
+  font-weight: 500;
+  color: #0d6efd;
+}
+
+
+
+/* === Knoten === */
+.timeline-knot {
+  position: absolute;
+  top: 38px;
+  width: 20px;
+  height: 20px;
+  background-color: #0d6efd;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.4);
+  z-index: 3;
+}
+
+.timeline-item.left .timeline-knot {
+  right: -10px;
+}
+
+.timeline-item.right .timeline-knot {
+  left: -10px;
+}
+
+/* === Verbindungslinien === */
+.timeline-item.left::before,
+.timeline-item.right::before {
+  content: "";
+  position: absolute;
+  top: 46px;
+  width: 30px;
+  height: 2px;
+  background: #dee2e6;
+  z-index: 1;
+}
+
+.timeline-item.left::before {
+  right: -30px;
+}
+
+.timeline-item.right::before {
+  left: -30px;
+}
+
+/* === Einheitliche Liste mit vertikaler Punktlinie === */
+.clean-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-inline-start: 15px;
+}
+
+.clean-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 5px;
+}
+
+
+.clean-list li::before {
+  content: "•";
+  color: #0d6efd;
+  font-size: 1.2em;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+/* === Responsive Ansicht === */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 25px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+    padding-right: 0;
+  }
+
+  .timeline-knot {
+    left: 15px;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+}
+
+.education-description {
+  text-align: left;
+  line-height: 1.6;
+  padding-left: 50px;   /* 👈 sanfter Innenabstand */
+  padding-right: 10px;  /* 👈 optional */
+  max-width: 600px;     /* 👈 verhindert zu breite Zeilen */
+  margin: 0 auto;       /* 👈 zentriert den Block im Card-Body */
+}
