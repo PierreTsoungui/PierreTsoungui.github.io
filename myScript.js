@@ -58,8 +58,7 @@ document.querySelectorAll(".nav-link").forEach(link=>{
         localStorage.setItem("ActiveSection",target);
          if (!targetSection) return;
 
-    // URL anpassen (z. B. /about, /portfolio, ...)
-    history.pushState(null, "", "/" + target.replace("#", ""));
+    
         document.querySelectorAll(".page-section").forEach(sec=>sec.classList.remove("active"));
          if (target === "#home") {
             isHome = true;
@@ -88,9 +87,6 @@ document.querySelectorAll(".nav-link").forEach(link=>{
 document.getElementById("phone").addEventListener("click", function (e) {
     e.preventDefault();
     
-
-    // URL anpassen (z. B. /about, /portfolio, ...)
-    history.pushState(null, "", "/" + target.replace("#", ""));
      let target=this.getAttribute('href')
         isHome = false;
              currentText = 0;
@@ -141,35 +137,3 @@ const lightboxImg = lightbox.querySelector('img');
     });
 
 
-
-    
-// Beim Laden: richtige Section anzeigen
-let path = window.location.pathname.replace("/", "");
-let lastTarg = path ? `#${path}` : localStorage.getItem("ActiveSection") || "#home";
-
-let targetSection = document.querySelector(lastTarg);
-if (targetSection) {
-  document.querySelectorAll(".page-section").forEach(sec => sec.classList.remove("active"));
-  targetSection.classList.add("active");
-
-  if (lastTarg === "#home") {
-    isHome = true;
-    type();
-  } else {
-    isHome = false;
-    currentText = 0;
-    currentChar = 0;
-    el.textContent = "";
-  }
-}
-
-// Beim Zurück/Nach-Vorne Navigieren (Browserpfeile)
-window.addEventListener("popstate", () => {
-  const path = window.location.pathname.replace("/", "");
-  const target = `#${path || "home"}`;
-  const section = document.querySelector(target);
-  if (section) {
-    document.querySelectorAll(".page-section").forEach(sec => sec.classList.remove("active"));
-    section.classList.add("active");
-  }
-});
