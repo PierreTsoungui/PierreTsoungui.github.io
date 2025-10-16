@@ -589,8 +589,41 @@ body {
 .education-description {
   text-align: left;
   line-height: 1.6;
-  padding-left: 50px;   /* 👈 sanfter Innenabstand */
-  padding-right: 10px;  /* 👈 optional */
-  max-width: 600px;     /* 👈 verhindert zu breite Zeilen */
-  margin: 0 auto;       /* 👈 zentriert den Block im Card-Body */
+  padding-left: 50px;   /*  sanfter Innenabstand */
+  padding-right: 10px;  /*  optional */
+  max-width: 600px;     /*  verhindert zu breite Zeilen */
+  margin: 0 auto;       /*  zentriert den Block im Card-Body */
+}
+
+
+/* --- RESPONSIV FÜR HANDY & TABLET --- */
+@media screen and (max-width: 992px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .left-content {
+    text-align: center;
+  }
+
+  .left-content h1 {
+    font-size: 38px !important;
+  }
+
+  .left-content h3 {
+    font-size: 20px;
+  }
+
+  .btn-glow {
+    margin-top: 2rem;
+  }
+
+  .right-content {
+    margin-top: 2rem;
+  }
 }
