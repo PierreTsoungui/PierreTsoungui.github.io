@@ -136,4 +136,42 @@ const lightboxImg = lightbox.querySelector('img');
       }, 300);
     });
 
+// Initialisierung von EmailJS
+(function() {
+  emailjs.init("92e5ygP9G_0W7gutU"); // <-- Ersetze mit deinem Public Key aus EmailJS Dashboard
+})();
+
+// Klick-Event für den "Senden"-Button
+document.getElementById("sendBtn").addEventListener("click", function() {
+  const name = document.getElementById("nameInput").value.trim();
+  const email = document.getElementById("emailInput").value.trim();
+  const message = document.getElementById("messageInput").value.trim();
+
+  // Validierung
+  if (!name || !email || !message) {
+    alert("⚠️ Bitte füllen Sie alle Felder aus.");
+    return;
+  }
+
+  // Daten für EmailJS
+  const params = {
+    from_name: name,
+    from_email: email,
+    message: message
+  };
+
+  // Email senden
+  emailjs.send("service_fv499ws", "template_d537acc", params)
+    .then(function(response) {
+      alert("✅ Nachricht erfolgreich gesendet!");
+      // Felder zurücksetzen
+      document.getElementById("nameInput").value = "";
+      document.getElementById("emailInput").value = "";
+      document.getElementById("messageInput").value = "";
+    })
+    .catch(function(error) {
+      console.error("Fehler:", error);
+      alert("❌ Fehler beim Senden der Nachricht. Bitte später versuchen.");
+    });
+});
 
