@@ -56,9 +56,8 @@ document.querySelectorAll(".nav-link").forEach(link=>{
         e.preventDefault();
         let target=this.getAttribute('href')
         localStorage.setItem("ActiveSection",target);
-         if (!targetSection) return;
+         if (!target) return;
 
-    
         document.querySelectorAll(".page-section").forEach(sec=>sec.classList.remove("active"));
          if (target === "#home") {
             isHome = true;
@@ -87,6 +86,7 @@ document.querySelectorAll(".nav-link").forEach(link=>{
 document.getElementById("phone").addEventListener("click", function (e) {
     e.preventDefault();
     
+
      let target=this.getAttribute('href')
         isHome = false;
              currentText = 0;
