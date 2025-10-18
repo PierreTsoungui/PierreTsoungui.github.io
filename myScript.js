@@ -136,35 +136,46 @@ const lightboxImg = lightbox.querySelector('img');
       }, 300);
     });
 
-// Initialisierung von EmailJS
 (function() {
-  emailjs.init("92e5ygP9G_0W7gutU"); // <-- Ersetze mit deinem Public Key aus EmailJS Dashboard
+  emailjs.init("92e5ygP9G_0W7gutU"); // <--- Dein öffentlicher EmailJS-Schlüssel hier!
 })();
 
-// Klick-Event für den "Senden"-Button
+
+
 document.getElementById("sendBtn").addEventListener("click", function() {
   const name = document.getElementById("nameInput").value.trim();
   const email = document.getElementById("emailInput").value.trim();
   const message = document.getElementById("messageInput").value.trim();
 
-  // Validierung
+  // 🧩 Validierung
   if (!name || !email || !message) {
     alert("⚠️ Bitte füllen Sie alle Felder aus.");
     return;
   }
 
-  // Daten für EmailJS
+  // 🕒 Datum + Zeit automatisch erzeugen
+  const now = new Date();
+  const formattedTime = now.toLocaleString("de-DE", {
+    weekday: "short",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+
+  // 📦 Daten für EmailJS
   const params = {
-    from_name: name,
-    from_email: email,
-    message: message
+    name: name,
+    email: email,
+    message: message,
+    time: formattedTime
   };
 
-  // Email senden
+  // 📤 E-Mail senden
   emailjs.send("service_fv499ws", "template_d537acc", params)
     .then(function(response) {
       alert("✅ Nachricht erfolgreich gesendet!");
-      // Felder zurücksetzen
       document.getElementById("nameInput").value = "";
       document.getElementById("emailInput").value = "";
       document.getElementById("messageInput").value = "";
@@ -174,4 +185,3 @@ document.getElementById("sendBtn").addEventListener("click", function() {
       alert("❌ Fehler beim Senden der Nachricht. Bitte später versuchen.");
     });
 });
-
